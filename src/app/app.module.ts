@@ -9,6 +9,19 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/module/material/material.module';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes:Routes=[
+  {
+    path:'home',component:HomeComponent
+  },
+  {
+    path:'settings',component:SettingsComponent
+  },
+  {
+    path:'about',component:AboutComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -22,7 +35,8 @@ import { MaterialModule } from './shared/module/material/material.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

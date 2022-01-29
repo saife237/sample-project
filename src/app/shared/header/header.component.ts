@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+public  tiles=['Home',"Settings",'About'];
+public links=['/home','/settings','/about'];
+
   constructor() { }
 
   ngOnInit(): void {
